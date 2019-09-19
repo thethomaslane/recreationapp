@@ -1,0 +1,20 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<h1>What activity will you like?</h1>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.outdoors.label }}<br>
+        {{ form.outdoors(size=32) }}
+    </p>
+    <p>
+        {{ form.active.label }}<br>
+        {{ form.active(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+    
+</form>
+<h1>Results:</h1>
+<h1>{{results}}</h1>
+{% endblock %}
