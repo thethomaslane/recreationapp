@@ -7,8 +7,9 @@ from flask import render_template
 from RecreationWebsite import app
 from RecreationWebsite.forms import ActivityForm
 
-@app.route('/')
+
 @app.route('/home')
+
 def home():
     """Renders the home page."""
     return render_template(
@@ -37,7 +38,10 @@ def about():
         message='Your application description page.'
     )
 
+
+@app.route('/',  methods=['GET', 'POST'])
 @app.route('/form',  methods=['GET', 'POST'])
+
 def form():
     results=""
     form = ActivityForm()
